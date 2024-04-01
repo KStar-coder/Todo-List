@@ -24,9 +24,11 @@ function App() {
 
   useEffect(() => {
 
-    if (todos !== undefined) {
-      const todos = JSON.parse(localStorage.getItem("todos")) || []; // Set default as empty array
-    }
+
+    const data = localStorage.getItem("todos")
+    console.log(data)
+    const todos = JSON.parse(localStorage.getItem("todos"))// Set default as empty array
+
     if (todos && todos.length > 0) {
       setTodos(todos)
     }
