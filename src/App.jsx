@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import './App.css'
+
 import { TodoProvider } from './contexts/TodoContext'
 import { TodoForm, TodoItem } from './components'
 
@@ -25,7 +25,7 @@ function App() {
   useEffect(() => {
 
     if (todos !== undefined) {
-      const todos = JSON.parse(localStorage.getItem("todos")) // Set default as empty array
+      const todos = JSON.parse(localStorage.getItem("todos")) || []; // Set default as empty array
     }
     if (todos && todos.length > 0) {
       setTodos(todos)
