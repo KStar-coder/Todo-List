@@ -4,7 +4,8 @@ import { TodoProvider } from './contexts/TodoContext'
 import { TodoForm, TodoItem } from './components'
 
 function App() {
-  const [todos, setTodos] = useState([])
+  // Our todo comes in the form of an array of objects 
+  const [todos, setTodos] = useState([]) // empty array by default so that JSON does not parse 'undefined'
 
   const addTodo = (todo) => {
     setTodos((oldtodos) => [...oldtodos, { id: Date.now(), ...todo }])
@@ -22,9 +23,8 @@ function App() {
     setTodos((oldtodos) => oldtodos.map((oldTodo) => oldTodo.id === id ? { ...oldTodo, completed: !oldTodo.completed } : oldTodo))
   }
 
+  // getting the data from local storage 
   useEffect(() => {
-
-
     const data = localStorage.getItem("todos")
     console.log(data)
     const todos = JSON.parse(localStorage.getItem("todos"))// Set default as empty array
@@ -35,6 +35,7 @@ function App() {
 
   }, [])
 
+  // setting the data 
   useEffect(() => {
     // local storage takes and sets things in string, so we need to convert the array to string using JSON.stringify
     localStorage.setItem("todos", JSON.stringify(todos))
