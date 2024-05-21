@@ -1,6 +1,7 @@
 # TODO LIST
 
 ## This application is made by exploring the application context under React and localStorage of the browser
+## This project ius currently under planning for further enhancements.
 
 Currently, two official plugins are available:
 
