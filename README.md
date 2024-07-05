@@ -5,7 +5,6 @@ This application is made by exploring the application context under React and lo
 
 
 
-
 ## Run Locally
 
 Clone the project
