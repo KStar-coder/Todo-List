@@ -9,7 +9,6 @@ Clone the project
 ```bash
   https://github.com/KStar-coder/Todo-List.git
 ```
-
 Go to the project directory
 
 ```bash
