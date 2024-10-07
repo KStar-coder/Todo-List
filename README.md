@@ -20,7 +20,6 @@ Install dependencies
 ```bash
   npm i
 ```
-
 Start the server
 
 ```bash
